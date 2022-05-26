@@ -1,0 +1,54 @@
+footer{
+    background-color: white;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#footer-headers{
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+    text-align: center;
+}
+
+#footer-p{
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+
+.user-shield-icon{
+    text-align: center;
+}
+
+
+.fa-user-shield{
+    color: #1259c3;
+    font-size: 2em; 
+    margin-bottom: 10px;
+}
+
+.gift-icon{
+    text-align: center;
+}
+
+.fa-gift{
+    color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+
+.credit-card-icon{
+    text-align: center;
+}
+
+.fa-credit-card{
+    color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;    
+}
+
+.container{
+    padding: 20px;
+}
