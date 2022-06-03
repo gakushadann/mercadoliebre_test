@@ -17,7 +17,20 @@ body{
     background-color: #ebebeb;
 }
 
-div.header-overall{
+.responsive{
+    width: 100%;
+    /* height: auto; */
+}
+
+.hideme{
+    display: none;
+}
+
+/* p {
+    font-size: 0.75rem;
+} */
+
+.header-overall{
     display: flex;
     flex-wrap: wrap;
     text-align: center;
@@ -25,7 +38,7 @@ div.header-overall{
     padding: 5%;
 }
 
-header div.top-header p{
+header div.header-overall p{
     width: 100%;
     margin-top: 10px;
 }
@@ -35,7 +48,7 @@ header{
 }
 
 header div.logo-ml,
-header .search-form{
+header div.search-form{
     width: 50%;
 }
 
@@ -51,6 +64,7 @@ header p{
 header .search-form{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: nowrap;
     padding: 2px;
     font-size: 11px;
@@ -71,7 +85,7 @@ header div.search-form i{
 }
 
 header nav{
-    font-size: 12px;
+    font-size: 0.8rem;
     margin-left: 20px;
 }
 
@@ -82,6 +96,13 @@ nav ul{
     display: none;
 }
 
+nav ul li{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    padding-right: 16px;
+}
+
 nav ul li a{
     text-decoration: none;
     color: black;
@@ -89,32 +110,31 @@ nav ul li a{
 }
 
 
-/* p {
-    font-size: 12px;
-} */
-
 h2{
     font-size: 24px;
+    margin-top: 24px;
+    margin-bottom: 16px;
 }
 
-footer{
-    background-color: white;
-    box-sizing: border-box;
-    padding: 20px;
-}
+
 
 .precios{
-    font-size: 18px;
+    font-size: 1.125rem;
+    width: 30%;
 }
 
 .descuentos{
-    font-size: 16px;
+    font-size: 1rem;
+    color: #39b54a;
+    width: 70%;
 }
 
 .descripciones{
-    font-size: 16px;
+    font-size: 1rem;
     display: none;
+    color: #666;
 }
+
 
 .burger-menu{
     text-align: center;
@@ -132,6 +152,7 @@ main{
     margin: 0 auto;
 }
 
+
 .last-visit,
 .offers{
     display: flex;
@@ -144,6 +165,43 @@ main section article i,
     color: #39b54a;
 }
 
+main section div.products-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+   
+.article-margin{
+    margin-bottom: 10px;
+}
+
+.article-margin:hover{
+    -webkit-box-shadow: -2px -2px 15px 6px rgba(197,197,209,0.7); 
+    box-shadow: -2px -2px 15px 6px rgba(197,197,209,0.7);
+    transition: 0.7s;
+}
+
+.article-margin:hover .descripciones{
+    display: block;
+}
+
+
+.article-card{
+    border: solid 1px #ebebeb;
+    padding: 15px;
+    background-color: white;
+    position: relative;
+}
+
+.pricedisc{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
 
 main section article i{
     display: block;
@@ -160,6 +218,10 @@ main section article i{
     transition: all 2s;
 }
 
+main section article i:hover{
+    transform: rotate(-90deg);
+}
+
 article div.main-article{
     width: 100%;
     display: flex;
@@ -168,6 +230,12 @@ article div.main-article{
     border-top: 1px solid #ebebeb;
     position: relative;
     padding: 15px;
+}
+
+footer{
+    background-color: white;
+    box-sizing: border-box;
+    padding: 20px;
 }
 
 .footer-headers{
@@ -185,10 +253,7 @@ article div.main-article{
     margin-bottom: px;
 }
 
-.responsive{
-    width: 100%;
-    height: auto;
-}
+
 
 .user-shield-icon{
     text-align: center;
@@ -222,33 +287,19 @@ article div.main-article{
     margin-bottom: 10px;    
 }
 
-
-.main-box{
-    width: 90%;
-    margin: 0 auto;
+.features-footer{
+    margin-bottom: 16px;
 }
 
-   
-.article-margin{
-    margin-bottom: 10px;
+.copyright{
+    margin-top: 24px;
 }
 
-.article-card{
-    width: 100%;
-    border: solid 1px #ebebeb;
-    padding: 15px;
-    background-color: white;
-    position: relative;
-}
-
-.hideme{
-    display: none;
-}
 
 
 
 @media (min-width: 361px){
-    header div.top-header{
+    header div.header-overall{
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
@@ -267,7 +318,7 @@ article div.main-article{
         display: none;
     }
 
-    main section div.products{
+    main section div.products-list{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -275,31 +326,34 @@ article div.main-article{
         align-items: flex-start;
     }
     
-    main section div.products article{
+    main section div.products-list article{
         width: 45%;
     }
 
-    .price,
-    .discount{
+    .precios,
+    .descuentos{
         width: 50%;
     }
 
-    .descripciones{
+    /* .descripciones{
         display:block;
-    };
+    }; */
+
+    .features-footer{
+        margin-right: 24px;
+    }
 
 }
 
 @media (min-width: 769px) {
-    main section div.products article{
+    main section div.products-list article{
         width: 22%;
     }
-    div.main-footer{
+    div.footer-overall{
         display: flex;
     }
-    footer div.main-footer i:hover{
-        color: #39b54a;
-        font-size: 2.5em;
+    footer div.footer-overall i:hover{
+        color: #03264C;
     }
 
     .fa-bars{
